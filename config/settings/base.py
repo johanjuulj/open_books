@@ -2,10 +2,11 @@
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+
 # Load environment variables
 load_dotenv()
 # Build paths inside the project
-BASE_DIR = Path(file).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # Application definition
@@ -22,8 +23,8 @@ THIRD_PARTY_APPS = [
     'django_htmx',  # for HTMX integration
 ]
 LOCAL_APPS = [
-    'apps.core.apps.CoreConfig',
-    'apps.users.apps.UsersConfig',
+    'apps.core', 
+    'apps.users',  
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = [

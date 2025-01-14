@@ -81,6 +81,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Authentication settings
+LOGIN_REDIRECT_URL = 'core:index'  # Where to send users after successful login if no next parameter is given
+LOGOUT_REDIRECT_URL = 'core:index'  # Where to send users after they logout
+LOGIN_URL = 'users:login'          # Where to send users if they try to access a @login_required page while not logged in
+
 # Internationalization
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'

@@ -14,10 +14,10 @@ class IndexView(TemplateView):
     template_name = 'index.html'
 
 class AboutView(TemplateView):
-    template_name = 'index.html'
+    template_name = 'about.html'
 
 class RoadMapView(TemplateView):
-    template_name = 'index.html'
+    template_name = 'roadmap.html'
 
 class VisionView(TemplateView):
-    template_name = 'index.html'
+    template_name = 'vision.html'

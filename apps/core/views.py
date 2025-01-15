@@ -13,3 +13,11 @@ from django.views.generic.list import ListView
 class IndexView(TemplateView):
     template_name = 'index.html'
 
+class AboutView(TemplateView):
+    template_name = 'index.html'
+
+class RoadMapView(TemplateView):
+    template_name = 'index.html'
+
+class VisionView(TemplateView):
+    template_name = 'index.html'
